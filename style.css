@@ -34,7 +34,7 @@ header {
 }
 
 .hero-mobile {
-  min-width: 414px;
+  min-width: 327px;
 }
 
 .max-width {
@@ -62,13 +62,6 @@ p {
   margin: 22px 0 32px;
 }
 
-.hero-btns {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-}
-
 button {
   height: 58px;
   border-radius: 29px;
@@ -80,6 +73,7 @@ button {
 .hero-btns button:first-child {
   width: 193px;
   background-color: var(--blue);
+  margin-bottom: 16px;
 }
 
 .hero-btns .version {
@@ -113,7 +107,7 @@ button {
 .images {
   width: 327px;
   display: grid;
-  grid-template-columns: repeat(2, 151px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   margin: 64px auto 0;
 }
@@ -200,4 +194,92 @@ h3 {
 
 .download-text .version {
   color: var(--purple);
+}
+
+@media (min-width: 768px) {
+  header {
+    margin-bottom: 16px;
+  }
+
+  .hero-mobile {
+    min-width: 820px;
+  }
+
+  .max-width {
+    max-width: 689px;
+  }
+
+  .hero-text {
+    padding: 0 116px;
+    margin: 72px auto 80px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .hero-text p {
+    margin-top: 24px;
+  }
+
+  .hero-btns button:first-child {
+    margin: 0 16px 0 0;
+  }
+
+  .images {
+    width: 689px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 11px;
+    margin: 57px auto 48px;
+  }
+
+  .image {
+    width: 164px;
+    height: 156px;
+  }
+
+  .image img {
+    width: 164px;
+  }
+
+  .desc-text {
+    padding: 0 58px;
+    margin: 0 auto 80px;
+  }
+
+  h3 {
+    font-size: 40px;
+    line-height: 44px;
+    margin-top: 16px;
+  }
+
+  .download {
+    margin-top: 192px;
+  }
+
+  .download .number {
+    position: absolute;
+    top: -112px;
+    left: calc(50vw - 28px);
+    z-index: 1;
+  }
+
+  .download-text {
+    position: absolute;
+    top: 92px;
+    left: calc(50vw - 345px);
+  }
+
+  .download-text h2 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .download-text p {
+    margin: 32px 0 40px;
+    padding: 0 58px;
+  }
 }
